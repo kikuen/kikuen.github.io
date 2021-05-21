@@ -56,7 +56,7 @@ function setData(data) {
             str += "</td><td class='text-center text-success'><i class='bi bi-patch-exclamation'></i></td>";
         }
 
-        str += "<td>" + tData[t]["response"] + "</td><td>" + tData[t]["description"] + "</td></tr>";
+        str += "<td>" + tData[t]["description"] + "</td></tr>";
         $(".table tbody").append(str);
     }
     $('td').addClass("text-center");
