@@ -1,3 +1,15 @@
+var date = new Date(2021,05,30,23,59,59);
+setInterval(function() {
+var now = new Date();
+var gap = date.getTime() - now.getTime();
+var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+$("#time").html(day + "일 " + hour + "시간 " + min + "분 " + sec + "초");
+}, 1000);
+
+
 $('#uid').focus();
 
 /* 쿠폰 종류 1 ~ 2(총 10개 수집중) */
