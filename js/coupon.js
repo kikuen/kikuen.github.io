@@ -18,7 +18,7 @@ var strs = ["KINGADEL", "DANJANGNIMLUV", "GUMANKM", "BIGUPDATE", "SENAYAHO", "VE
 /* 테이블 초기화 데이터 */
 var tData = new Array();
 $(strs).each(function (index) {
-    tData.push({ id: index + 1, code: this, result: 0, response: '', description: '계정코드를 입력하고 쿠폰을 등록하세요.' });
+    tData.push({ id: index + 1, code: this, result: 0, response: '', description: '계정코드를 입력하고 쿠폰을 사용하세요.' });
 });
 setData(tData);
 

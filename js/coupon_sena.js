@@ -12,8 +12,8 @@ $("#time").html(day + "일 " + hour + "시간 " + min + "분 " + sec + "초");
 
 $('#uid').focus();
 
-/* 쿠폰 종류 1 ~ 2(총 10개 수집중) */
-var strs = ["goddesscoco", "ineedruby","moreruby","infinitycoco"];
+/* 쿠폰 종류 1 ~ 3*/
+var strs = ["CAMPINGSENA2", "HAPPY200SENA","DANJANGNIMS2"];
 
 /* 테이블 초기화 데이터 */
 var tData = new Array();
@@ -29,7 +29,7 @@ function req() {
         let i = a;
         $.ajax({
             type: 'POST',
-            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1304/apply',
+            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1302/apply',
             data: {
                 'pid': uid,
                 'channelCode': 100,
