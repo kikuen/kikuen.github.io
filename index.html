@@ -1,27 +1,63 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>세나2 파나 길드 쿠폰 등록</title>
+    <title>세나2 대보물시대 쿠폰 등록</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet"></style>
 </head>
 <body>
+    <header id="header" class="container"></header>
     <div class="container">
         <br/>
         <div class="row">
-            <div class="col-sm-4">
-               <a href="event.html" class="form-control btn btn-primary text-center">대보물시대</a>
+            <div class="col-sm-12">
+                <h3 class="text-center">
+                    세나2 대보물시대 쿠폰 등록 - 사용 기간 : 21년 6월 30일 23시 59분
+                </h3>
             </div>
-            <div class="col-sm-4 mt-1 mt-md-0">
-                <a href="event_coco.html" class="form-control btn btn-primary text-center">코코의 대보물시대</a>
-             </div>
-             <div class="col-sm-4 mt-1 mt-md-0">
-                <a href="event_sena.html" class="form-control btn btn-primary text-center">소통하세나</a>
-             </div>
         </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center">
+                    남은시간 - <span id="time"></span>
+                </h3>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="form-control text-center text-info">계정코드</label>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="uid" placeholder="계정코드 작성란"/>
+            </div>
+            <div class="col-sm-3 mt-1 mt-md-0">
+                <button class="btn btn-primary form-control" onclick="req();">쿠폰사용</button>
+            </div>
+            <div class="col-sm-3 mt-1 mt-md-0">
+                <a class="btn btn-danger form-control" target="_blank"
+                    href="https://forum.netmarble.com/sk2/view/13/746266">공지확인</a>
+            </div>
+        </div>
+        <hr/>
+        <table class="table table-bordered">
+            <thead>
+                <tr class='thead-dark text-center'><th>No</th><th>쿠폰코드</th><th>결과</th><th>설명</th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-<script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.ne
+t/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<script src="./js/coupon.js"></script>
+<script>
+    $(document).ready( function() {
+        $("#header").load("header.html");
+    });
+</script>
 </body></html>
