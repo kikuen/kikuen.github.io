@@ -1,4 +1,4 @@
-var date = new Date(2021,05,30,23,59,59);
+var date = new Date(2021,08,22,23,59,59);
 setInterval(function() {
 var now = new Date();
 var gap = date.getTime() - now.getTime();
@@ -13,7 +13,7 @@ $("#time").html(day + "일 " + hour + "시간 " + min + "분 " + sec + "초");
 $('#uid').focus();
 
 /* 쿠폰 종류 1 ~ 3*/
-var strs = ["CAMPINGSENA2", "HAPPY200SENA","DANJANGNIMS2"];
+var strs = ["JMANDJHSGIFT"];
 
 /* 테이블 초기화 데이터 */
 var tData = new Array();
@@ -29,7 +29,7 @@ function req() {
         let i = a;
         $.ajax({
             type: 'POST',
-            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1302/apply',
+            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1332/apply',
             data: {
                 'pid': uid,
                 'channelCode': 100,
