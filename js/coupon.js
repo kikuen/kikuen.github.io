@@ -1,4 +1,4 @@
-var date = new Date(2021,05,30,23,59,59);
+var date = new Date(2021,08,22,23,59,59);
 setInterval(function() {
 var now = new Date();
 var gap = date.getTime() - now.getTime();
@@ -9,11 +9,11 @@ var sec = Math.floor((gap % (1000 * 60)) / 1000);
 $("#time").html(day + "일 " + hour + "시간 " + min + "분 " + sec + "초");
 }, 1000);
 
-console.log(date);
+
 $('#uid').focus();
 
-/* 쿠폰 종류 1 ~ 100 */
-var strs = ["KINGADEL", "DANJANGNIMLUV", "GUMANKM", "BIGUPDATE", "SENAYAHO", "VELVET", "GOGOSENA", "COMINGSOON", "NEWSCENARIO", "DUGUDUGU", "EVENTMATJIB", "LADY", "LEGENDSENA", "REINFORCE", "DUDUDUNGA", "ONESHOT", "KEEEEE", "8RAID8", "EVAN", "4RAID4", "WOWSENA", "LADYKILLER", "HAPPYCOCO", "OLDRUDY", "IMSOHOT", "UPDATE", "SENAFOREVER", "SEYAHO", "SKNIGHTS2", "HISENA2", "7INFINITE7", "TPQMSSKDLCM2", "GREATEVENT", "2SEVEN2", "SK2FORUM", "SENAINSSA", "2S2E2V2E2N", "COCOJOA", "CHECKCHECK", "2STHGINNEVES", "SENAMOON", "KEKESENA2", "SENAGA", "7S7E7V7E7N", "guildsuccess", "STRONGROCK", "SK2ARENA", "EVANKARIN", "2SENA2", "BOSSKING", "SENA2AGGYOJUSEYO", "JUSEYO", "ANAWIFI", "UHPRETTY", "GIVEMEGIFT", "BIGBIGEVENT", "SENA2YEONHEE", "FROMCOCO", "SENA2LENE", "AYAAPAYO", "SENA2GUIDE", "SENA2RUDY", "LUVCOCO", "INFINITYWAR", "77INFINITE77", "GREATSENA", "BONBUJANGNIM", "SPECIALTICKET", "JJANGSENA", "HAPPYSENAS2", "SENA2KING", "SENA2DOWN", "PLAYSENATWO", "RUNSENA2", "SENADDABONG", "SENA2LUCKY", "SENA2DERUWA", "EVANVSRUDY", "DARKBLACKSHANE", "LUCKYTICKET", "MAINSENA2", "JAEMI2TH", "PUKISENA", "KEKEEVAN", "PRETTYCOCO", "CUTYCOCO", "GOMAWAYOS2", "SIDANEUNGEOJI", "7KNIGHTS2", "GOGOYOEMYEONG", "SENA2JOA", "SENA2FOREVER", "MINGSARANGHE", "DANJANGNIM", "SAYSENA2", "DANJANGNIMTHX", "HEHESENA", "COMEBACKSENA", "WASENADA", "2PRESENTSENA2"];
+/* 쿠폰 종류 1 ~ 3*/
+var strs = ["JMANDJHSGIFT"];
 
 /* 테이블 초기화 데이터 */
 var tData = new Array();
@@ -29,7 +29,7 @@ function req() {
         let i = a;
         $.ajax({
             type: 'POST',
-            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1290/apply',
+            url: 'https://couponview.netmarble.com/coupon/sknightsmmo/1332/apply',
             data: {
                 'pid': uid,
                 'channelCode': 100,
@@ -48,7 +48,7 @@ function req() {
                 } else if (data['resultCode'] === 'COUPON_WRONG') {
                     tData[i]['description'] = '잘못된 쿠폰 코드';
                 } else {
-                    tData[i]['description'] = '알수 없음';
+                    tData[i]['description'] = '알수 없는 내용';
                 }
                 tData[i]['response'] = data['resultCode'];
                 setData(tData);
