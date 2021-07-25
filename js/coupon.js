@@ -13,7 +13,7 @@ $("#time").html(day + "일 " + hour + "시간 " + min + "분 " + sec + "초");
 $('#uid').focus();
 
 /* 쿠폰 종류 1 ~ 3*/
-var strs = ["JMANDJHSGIFT","JJINDANJANGSGIFT"];
+var strs = ["JMANDJHSGIFT","JJINDANJANGSGIFT","ONTACTSENA2"];
 
 /* 테이블 초기화 데이터 */
 var tData = new Array();
